@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Holding Hands Recovery Centre | Rehab in Naivasha</title>
+<title>Holding Hands Mission Recovery Centre | Rehab in Naivasha</title>
 
 <link rel="icon" href="logo.png">
 
@@ -18,8 +18,7 @@ header{
 position:sticky;top:0;
 display:flex;justify-content:space-between;align-items:center;
 padding:15px 30px;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);
+background:white;
 border-bottom:1px solid #ddd;
 z-index:1000;
 }
@@ -41,11 +40,11 @@ text-align:center;
 color:white;
 background:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1506126613408-eca07ce68773') center/cover;
+url('image1.jpg') center/cover;
 animation:fadeIn 1.5s ease;
 }
 
-.hero h1{font-size:45px;margin-bottom:10px;}
+.hero h1{font-size:40px;margin-bottom:10px;}
 .hero p{margin-bottom:20px;}
 
 .btn{
@@ -59,9 +58,7 @@ transition:0.3s;
 .btn-green{background:#0b7a3e;color:white;}
 .btn-outline{border:2px solid white;color:white;}
 
-.btn:hover{transform:translateY(-2px);}
-
-.section{padding:80px 20px;text-align:center;}
+.section{padding:70px 20px;text-align:center;}
 .container{max-width:1100px;margin:auto;}
 
 .grid{
@@ -82,30 +79,6 @@ transition:0.3s;
 .gallery img{
 width:100%;
 border-radius:10px;
-transition:0.3s;
-}
-.gallery img:hover{transform:scale(1.05);}
-
-form input, form textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-form button{
-background:#0b7a3e;
-color:white;
-padding:12px;
-border:none;
-width:100%;
-cursor:pointer;
-}
-
-form button.loading{
-background:gray;
-cursor:not-allowed;
 }
 
 /* Popup */
@@ -122,18 +95,7 @@ text-align:center;
 transition:0.3s;
 z-index:2000;
 }
-
-.popup.active{
-transform:translate(-50%,-50%) scale(1);
-}
-
-.popup button{
-margin-top:15px;
-background:#0b7a3e;
-color:white;
-border:none;
-padding:10px 20px;
-}
+.popup.active{transform:translate(-50%,-50%) scale(1);}
 
 /* Floating buttons */
 .whatsapp,.call-btn{
@@ -144,7 +106,6 @@ border-radius:50%;
 color:white;
 text-decoration:none;
 }
-
 .whatsapp{bottom:20px;background:#25D366;}
 .call-btn{bottom:80px;background:#0b7a3e;}
 
@@ -158,20 +119,34 @@ to{opacity:1;transform:translateY(0);}
 <body>
 
 <header>
-<h3>Holding Hands</h3>
+<h3>Holding Hands Mission</h3>
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#why">Why Us</a>
 <a href="#gallery">Gallery</a>
 <a href="#contact">Book</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Healing Starts Here</h1>
-<p>Professional Drug & Alcohol Recovery in Naivasha</p>
+<h1>Holding Hands Mission Recovery Centre</h1>
+<p>Turning Struggles to Strengths</p>
 <a href="#contact" class="btn btn-green">Start Recovery</a>
 <a href="tel:+254706466150" class="btn btn-outline">Call Now</a>
+</section>
+
+<section id="about" class="section">
+<div class="container">
+<h2>About Us</h2>
+<p>
+Holding Hands Mission Recovery Centre is dedicated to helping individuals overcome drug and alcohol addiction.
+Located in Mirera along Naivasha–Mai Mahiu Road, between Lake Naivasha and Mt. Longonot, we provide a safe and supportive environment for healing.
+</p>
+<p>
+Our approach focuses on structure, compassion, and long-term recovery — helping every individual turn their struggles into strengths.
+</p>
+</div>
 </section>
 
 <section id="services" class="section">
@@ -180,10 +155,24 @@ to{opacity:1;transform:translateY(0);}
 <div class="grid">
 <div class="card">Drug & Alcohol Recovery</div>
 <div class="card">Detoxification</div>
-<div class="card">Counselling</div>
+<div class="card">Counselling & Therapy</div>
 <div class="card">Relapse Prevention</div>
 <div class="card">Family Support</div>
-<div class="card">Aftercare</div>
+<div class="card">Aftercare & Reintegration</div>
+</div>
+</div>
+</section>
+
+<section id="why" class="section">
+<div class="container">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">Qualified Doctors, Nurses & Counsellors</div>
+<div class="card">Confidential & Compassionate Care</div>
+<div class="card">Safe & Supportive Environment</div>
+<div class="card">Proven Recovery Programs</div>
+<div class="card">Affordable Packages</div>
+<div class="card">Great Hospitality</div>
 </div>
 </div>
 </section>
@@ -207,9 +196,8 @@ to{opacity:1;transform:translateY(0);}
 <form id="bookingForm">
 <input type="text" id="name" placeholder="Your Name" required>
 <input type="tel" id="phone" placeholder="Phone Number" required>
-<textarea id="message" placeholder="Describe your situation"></textarea>
-
-<button type="submit" id="submitBtn">Submit Booking</button>
+<textarea id="message" placeholder="Your message"></textarea>
+<button type="submit">Submit Booking</button>
 </form>
 
 </div>
@@ -217,7 +205,7 @@ to{opacity:1;transform:translateY(0);}
 
 <div class="popup" id="popup">
 <h3>Booking Sent ✅</h3>
-<p>We will contact you shortly via WhatsApp.</p>
+<p>We will contact you shortly.</p>
 <button onclick="closePopup()">OK</button>
 </div>
 
@@ -225,38 +213,28 @@ to{opacity:1;transform:translateY(0);}
 <a href="tel:+254706466150" class="call-btn">📞</a>
 
 <script>
-const form = document.getElementById("bookingForm");
-const popup = document.getElementById("popup");
-const btn = document.getElementById("submitBtn");
-
-form.addEventListener("submit", function(e){
+document.getElementById("bookingForm").addEventListener("submit", function(e){
 e.preventDefault();
-
-btn.classList.add("loading");
-btn.innerText = "Sending...";
 
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
 let message = document.getElementById("message").value;
 
-let text = `Hello, I would like to book an appointment.%0AName: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+let text = `Hello, I would like to book.%0AName: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
+
+document.getElementById("popup").classList.add("active");
 
 setTimeout(()=>{
-popup.classList.add("active");
-btn.classList.remove("loading");
-btn.innerText = "Submit Booking";
-
 window.open(`https://wa.me/254706466150?text=${text}`, "_blank");
+},1000);
 
-form.reset();
-},1500);
-
+this.reset();
 });
 
 function closePopup(){
-popup.classList.remove("active");
+document.getElementById("popup").classList.remove("active");
 }
 </script>
 
 </body>
-</html>
+  </html>
